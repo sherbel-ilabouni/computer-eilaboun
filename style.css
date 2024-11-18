@@ -1,0 +1,287 @@
+
+
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f9f9f9;
+     color: #333;
+ }
+
+ header {
+     background-color: #004aad;
+     color: white;
+     text-align: center;
+     padding: 10px;
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+ }
+
+ header h1 {
+     font-size: 1.5rem;
+     margin: 0;
+     padding: 10px;
+ }
+
+ marquee {
+     font-size: 1rem;
+     color: #ffdd57;
+     margin: 5px 0;
+     font-weight: bold;
+     padding-left: 50%;
+     padding-right: 50%
+ }
+
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 10px;
+     display: grid;
+     grid-template-columns: repeat(3, minmax(280px, 1fr));
+     gap: 15px;
+     direction: rtl;
+
+ }
+
+ .promo-card {
+     background-color: white;
+     border: 1px solid #ddd;
+     border-radius: 12px;
+     padding: 0;
+     height: 450px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+     transition: transform 0.2s;
+     direction: rtl;
+
+ }
+
+ .promo-card2 {
+     height: 530px;
+ }
+
+ .promo-image2 {
+     height: 330px !important;
+ }
+
+ .promo-card:active {
+     transform: scale(0.98);
+ }
+
+ .promo-image {
+     width: 100%;
+     height: 250px;
+     border-radius: 8px;
+     overflow: hidden;
+     margin-bottom: 15px;
+ }
+
+
+ .promo-image img {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+ }
+
+ .promo-title {
+     font-size: 1.2rem;
+     margin-bottom: 10px;
+     color: #004aad;
+     text-align: center;
+     font-weight: bold;
+ }
+
+ .promo-description {
+     font-size: 1rem;
+     margin-bottom: 15px;
+     color: #555;
+     text-align: center;
+ }
+
+ .promo-price {
+     margin-bottom: 15px;
+     font-size: 1.1rem;
+     color: #333;
+     display: flex;
+     gap: 10px;
+     align-items: center;
+ }
+
+ .promo-price .current-price {
+     color: #004aad;
+     font-weight: bold;
+ }
+
+ .promo-price .original-price {
+     text-decoration: line-through;
+     color: #999;
+ }
+
+ .promo-button {
+     width: 90%;
+     padding: 12px;
+     background-color: #004aad;
+     color: white;
+     text-decoration: none;
+     border-radius: 8px;
+     font-size: 1rem;
+     transition: background-color 0.2s;
+     text-align: center;
+     font-weight: bold;
+ }
+
+ .promo-button:active {
+     background-color: #003380;
+ }
+ #popup-contact {
+     display: none;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 400px;
+     padding: 20px;
+     background: linear-gradient(235deg, #3498db, #2ecc71);
+     border-radius: 15px;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+     z-index: 1000;
+     text-align: center;
+ }
+
+ #popup-contact h2 {
+     margin-bottom: 15px;
+     font-size: 32px;
+     color: #333;
+ }
+
+ #close-popup {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     background: none;
+     border: none;
+     font-size: 18px;
+     font-weight: bold;
+     color: #555;
+     cursor: pointer;
+     transition: color 0.3s ease;
+ }
+
+ #close-popup:hover {
+     color: #ff0000;
+ }
+ footer {
+     background-color: #004aad;
+     color: white;
+     text-align: center;
+     padding: 20px 10px;
+     margin-top: 30px;
+ }
+
+ footer .social-icons {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 15px;
+     flex-wrap: wrap;
+     margin-bottom: 15px;
+ }
+
+ footer .social-icons a {
+     color: white;
+     font-size: 24px;
+     text-decoration: none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     background-color: rgba(255, 255, 255, 0.1);
+     border: 2px solid white;
+     transition: all 0.2s;
+ }
+
+ footer .social-icons a:hover {
+     background-color: #dfcb7c;
+
+ }
+
+ footer .social-icons a:active {
+     background-color: #ffdd57;
+     color: #004aad;
+     transform: scale(0.95);
+ }
+
+ footer p {
+     margin: 5px 0 0;
+     font-size: 0.9rem;
+ }
+
+ @media screen and (max-width: 600px) {
+     header h1 {
+         font-size: 1.2rem;
+     }
+
+     .container {
+         padding: 10px;
+         grid-template-columns: 1fr;
+     }
+
+     .promo-card {
+         height: 400px;
+         margin: 0 10px;
+     }
+
+     .promo-card2 {
+         height: 500px;
+     }
+
+     .promo-image {
+         height: 180px;
+     }
+
+     .promo-title {
+         font-size: 1.1rem;
+     }
+
+     .promo-description {
+         font-size: 0.9rem;
+     }
+
+     footer .social-icons a {
+         width: 45px;
+         height: 45px;
+         font-size: 20px;
+     }
+
+     marquee p {
+         margin: 0;
+     }
+
+     marquee {
+         font-size: 1rem;
+         color: #ffdd57;
+         margin: 5px 0;
+         font-weight: bold;
+         padding-left: 50%;
+         padding-right: 50%
+     }
+
+     #close-popup {
+
+         text-align: center;
+         justify-self: center;
+         background-color: #003380;
+         color: #ff0000;
+         border-radius: 20px;
+         height: 40px;
+         width: 40px;
+         font-size: 2rem;
+         right: 8%;
+     }
+ }
+
